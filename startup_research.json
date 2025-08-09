@@ -1,0 +1,2630 @@
+{
+  "name": "Razorpay Case Study",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg",
+          "mode": "list",
+          "cachedResultName": "Razorpay Case Study",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 226454740,
+          "mode": "list",
+          "cachedResultName": "Backstage with Millionaires Channel",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit#gid=226454740"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "YT Link": "={{ $json.link }}",
+            "Creator": "={{ $json.creator }}",
+            "Title": "={{ $json.title }}",
+            "Publish Date": "={{ $json.pubDate }}"
+          },
+          "matchingColumns": [
+            "YT Link"
+          ],
+          "schema": [
+            {
+              "id": "Creator",
+              "displayName": "Creator",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "YT Link",
+              "displayName": "YT Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Publish Date",
+              "displayName": "Publish Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Content",
+              "displayName": "Content",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -400,
+        430
+      ],
+      "id": "1e6c4a34-4b62-4620-b47f-645d6cd45fd1",
+      "name": "Google Sheets2",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "H8wE9zp3Vh0SCdId",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -180,
+        430
+      ],
+      "id": "d89cb014-53fd-403e-b628-85ac95f37c2f",
+      "name": "Loop Over Items1"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg",
+          "mode": "list",
+          "cachedResultName": "Razorpay Case Study",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 226454740,
+          "mode": "list",
+          "cachedResultName": "Backstage with Millionaires Channel",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit#gid=226454740"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "YT Link": "={{ $json.url }}",
+            "Content": "={{ $json.transcript_only_text }}"
+          },
+          "matchingColumns": [
+            "YT Link"
+          ],
+          "schema": [
+            {
+              "id": "Creator",
+              "displayName": "Creator",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "YT Link",
+              "displayName": "YT Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Publish Date",
+              "displayName": "Publish Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Content",
+              "displayName": "Content",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        260,
+        430
+      ],
+      "id": "f0fce33e-5569-467f-8fa3-47b00a3ed542",
+      "name": "Google Sheets3",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "H8wE9zp3Vh0SCdId",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/scrape-creators~best-youtube-transcripts-scraper/run-sync-get-dataset-items?token=apify_api_IAMvDb6gxOgWGjtqaArbvabzUndbOg1Z7Rh6",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"videoUrls\": [\n        \"{{ $json['YT Link'] }}\"\n    ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        40,
+        355
+      ],
+      "id": "dbe51a68-a0c1-4cc7-9fec-9dda472d0435",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg",
+          "mode": "list",
+          "cachedResultName": "Razorpay Case Study",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 226454740,
+          "mode": "list",
+          "cachedResultName": "Youtube Channels",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit#gid=226454740"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "YT Link": "={{ $json.link }}",
+            "Creator": "={{ $json.creator }}",
+            "Title": "={{ $json.title }}",
+            "Publish Date": "={{ $json.pubDate }}"
+          },
+          "matchingColumns": [
+            "YT Link"
+          ],
+          "schema": [
+            {
+              "id": "Creator",
+              "displayName": "Creator",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "YT Link",
+              "displayName": "YT Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Publish Date",
+              "displayName": "Publish Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Content",
+              "displayName": "Content",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -400,
+        730
+      ],
+      "id": "7fc76baf-b7eb-4993-8798-eee34f6a3366",
+      "name": "Google Sheets4",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "H8wE9zp3Vh0SCdId",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -180,
+        730
+      ],
+      "id": "108dbf85-9e51-4c8a-a567-42939da77db6",
+      "name": "Loop Over Items2"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg",
+          "mode": "list",
+          "cachedResultName": "Razorpay Case Study",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 226454740,
+          "mode": "list",
+          "cachedResultName": "Backstage with Millionaires Channel",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit#gid=226454740"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "YT Link": "={{ $json.url }}",
+            "Content": "={{ $json.transcript_only_text }}"
+          },
+          "matchingColumns": [
+            "YT Link"
+          ],
+          "schema": [
+            {
+              "id": "Creator",
+              "displayName": "Creator",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "YT Link",
+              "displayName": "YT Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Publish Date",
+              "displayName": "Publish Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Content",
+              "displayName": "Content",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        260,
+        730
+      ],
+      "id": "c2228fc8-b483-4150-a381-11953bb51aec",
+      "name": "Google Sheets5",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "H8wE9zp3Vh0SCdId",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/scrape-creators~best-youtube-transcripts-scraper/run-sync-get-dataset-items?token=apify_api_IAMvDb6gxOgWGjtqaArbvabzUndbOg1Z7Rh6",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"videoUrls\": [\n        \"{{ $json['YT Link'] }}\"\n    ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        40,
+        655
+      ],
+      "id": "e148afa8-99ea-42ed-9f04-8fda17157239",
+      "name": "HTTP Request2"
+    },
+    {
+      "parameters": {
+        "url": "https://rss.app/feeds/2VCPCvwp32ULA42e.xml",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -620,
+        430
+      ],
+      "id": "7f993e0d-0e5d-401d-9320-1cddc5d53703",
+      "name": "Backstage with Millionaires"
+    },
+    {
+      "parameters": {
+        "url": "https://rss.app/feeds/nSaUiIaWL2JERtBL.xml",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -620,
+        730
+      ],
+      "id": "b92fce5e-b799-4921-aa06-4929fd45e7f7",
+      "name": "Fibonnaci X"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -840,
+        280
+      ],
+      "id": "70fc159f-f18d-4f4f-a099-aa74dae5bcce",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "66c6ff4c-7591-466b-b9b0-e3a36600312a",
+              "name": "url",
+              "value": "=[\"https://x.com/StartupReport\",\n\"https://x.com/DeVC_Global\"]",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -620,
+        130
+      ],
+      "id": "b10b01b5-01b8-4450-86a7-3bf179f28ad4",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "url": "https://api.apify.com/v2/acts/gentle_cloud~twitter-tweets-scraper/run-sync-get-dataset-items?token=apify_api_IAMvDb6gxOgWGjtqaArbvabzUndbOg1Z7Rh6",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"result_count\": \"50\",\n    \"since_date\": \"2025-01-01\",\n    \"start_urls\": [\n        {\n            \"url\": \"{{ $json.url }}\",\n            \"method\": \"GET\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        40,
+        60
+      ],
+      "id": "d7590341-2bc5-495d-a735-2b756596dfa0",
+      "name": "HTTP Request3"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg",
+          "mode": "list",
+          "cachedResultName": "Razorpay Case Study",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1540904907,
+          "mode": "list",
+          "cachedResultName": "Twitter Feed",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit#gid=1540904907"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Tweet URL": "={{ $json.url }}",
+            "Create Date": "={{ $json.created_at }}",
+            "Tweet Text": "={{ $json.full_text }}",
+            "Creator Name": "={{ $json.user.name }}",
+            "Links Mentioned": "={{ $json.entities.urls }}"
+          },
+          "matchingColumns": [
+            "Tweet URL"
+          ],
+          "schema": [
+            {
+              "id": "Create Date",
+              "displayName": "Create Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Tweet Text",
+              "displayName": "Tweet Text",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Tweet URL",
+              "displayName": "Tweet URL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Creator Name",
+              "displayName": "Creator Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Links Mentioned",
+              "displayName": "Links Mentioned",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        260,
+        130
+      ],
+      "id": "0d0c00b4-3672-4885-800c-d0d846b4a110",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "H8wE9zp3Vh0SCdId",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -180,
+        130
+      ],
+      "id": "9ad3d223-b7fe-4d30-95f1-8af1c530b9e8",
+      "name": "Loop Over Items3"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "url",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -400,
+        130
+      ],
+      "id": "580d6c7e-a2f7-4f86-b681-c84d90e04842",
+      "name": "Split Out1"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -840,
+        2725
+      ],
+      "id": "7aff1072-570d-481b-898a-2b3872fef3fa",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg",
+          "mode": "list",
+          "cachedResultName": "Razorpay Case Study",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1540904907,
+          "mode": "list",
+          "cachedResultName": "Twitter Feed",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit#gid=1540904907"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -620,
+        1365
+      ],
+      "id": "0edff217-c5f5-440e-827a-7c857ae9a6fb",
+      "name": "Google Sheets7",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "H8wE9zp3Vh0SCdId",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg",
+          "mode": "list",
+          "cachedResultName": "Razorpay Case Study",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 226454740,
+          "mode": "list",
+          "cachedResultName": "Youtube Channels",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit#gid=226454740"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -620,
+        2065
+      ],
+      "id": "631a97c6-f1c6-4558-a747-a98baf89efeb",
+      "name": "Google Sheets8",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "H8wE9zp3Vh0SCdId",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Check if the tweet content mentions or refers to any company and output the name of the company/companies mentioned in the tweet submitted to you\n\nFigure out the context in which the information is mentioned also layout the context along with the name of the company\n\nAlong with this also categorise the reason why the company is being talked about. Here are a few categories you can put the company into\n1. It is a funding announcement\n2. There was a product hunt launch\n3. The founder post went viral\n4. Founder was featured in a Youtube video or in a startup feature segment\n5. Any other public signal - press mention, award, waitlist spikes etc.\n\nAlong with this, also think about other reasons why the company might be \"in trend\".\n\nTweet Text:\n{{ $json['Tweet Text'] }}\n\nSource URL:\n{{ $json['Tweet URL'] }}\n\nOther Links Mentioned:\n{{ $json['Links Mentioned'] }}",
+        "hasOutputParser": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        -164,
+        990
+      ],
+      "id": "1fa1be60-10b2-40d1-90ce-6b8cc8d388f2",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        260,
+        -145
+      ],
+      "id": "2f88752f-7240-4004-9010-a3b9a935c313",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg",
+          "mode": "list",
+          "cachedResultName": "Razorpay Case Study",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "INC 42 data",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "URL Link": "={{ $('Split Out').item.json.urls }}",
+            "Content of URL": "={{ $json.data1 }}",
+            "Content of URL 2": "={{ $json.data2 }}"
+          },
+          "matchingColumns": [
+            "URL Link"
+          ],
+          "schema": [
+            {
+              "id": "URL Link",
+              "displayName": "URL Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Content of URL",
+              "displayName": "Content of URL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Content of URL 2",
+              "displayName": "Content of URL 2",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        920,
+        -145
+      ],
+      "id": "35f3e095-2f6f-45cb-a17d-7f42b19a2372",
+      "name": "Google Sheets1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "H8wE9zp3Vh0SCdId",
+          "name": "Google Sheets account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Add a new field called 'myNewField' to the JSON of the item\nconst inputHtmlString = $input.item.json.data;\n\nfunction cleanHtmlContent(htmlString) {\n    if (typeof htmlString !== 'string' || !htmlString) {\n        return \"\";\n    }\n\n    let cleanedText = htmlString;\n\n    // 1. Remove script and style tags and their content\n    cleanedText = cleanedText.replace(/<script\\b[^<]*(?:(?!<\\/script>)<[^<]*)*<\\/script>/gi, '');\n    cleanedText = cleanedText.replace(/<style\\b[^<]*(?:(?!<\\/style>)<[^<]*)*<\\/style>/gi, '');\n\n    // 2. Remove title tags and their content\n    cleanedText = cleanedText.replace(/<title\\b[^<]*(?:(?!<\\/title>)<[^<]*)*<\\/title>/gi, '');\n\n    // 3. Remove all other HTML tags\n    cleanedText = cleanedText.replace(/<[^>]*>/g, '');\n\n    // 4. Replace common HTML entities with their corresponding characters\n    cleanedText = cleanedText.replace(/&amp;/g, '&');\n    cleanedText = cleanedText.replace(/&lt;/g, '<');\n    cleanedText = cleanedText.replace(/&gt;/g, '>');\n    cleanedText = cleanedText.replace(/&quot;/g, '\"');\n    cleanedText = cleanedText.replace(/&#39;/g, \"'\"); \n    cleanedText = cleanedText.replace(/&nbsp;/g, ' '); \n    cleanedText = cleanedText.replace(/&mdash;/g, '—'); \n    cleanedText = cleanedText.replace(/&ndash;/g, '–'); \n    cleanedText = cleanedText.replace(/&copy;/g, '©'); \n    cleanedText = cleanedText.replace(/&reg;/g, '®'); \n    cleanedText = cleanedText.replace(/&trade;/g, '™'); \n\n    // 5. Remove common template literal/variable patterns\n    cleanedText = cleanedText.replace(/\\{\\{\\{[^}]*\\}\\}\\}/g, ''); \n    cleanedText = cleanedText.replace(/\\{\\{[^}]*\\}\\}/g, ''); \n    cleanedText = cleanedText.replace(/\\$\\{[^}]*\\}/g, '');  \n\n    // 6. Remove all URLs from the text (http, https, www, bare domains)\n    cleanedText = cleanedText.replace(/\\b(?:https?:\\/\\/|www\\.)[^\\s]+/gi, '');\n    cleanedText = cleanedText.replace(/\\b[a-z0-9.-]+\\.[a-z]{2,}(?:\\/[^\\s]*)?/gi, '');\n\n    // 7. Collapse all whitespace into a single space\n    cleanedText = cleanedText.replace(/\\s+/g, ' ').trim();\n\n    return cleanedText;\n}\n\n// Clean the HTML content\nlet cleaned = cleanHtmlContent(inputHtmlString);\n\n// Output only data1 and data2\nif (cleaned.length > 40000) {\n    $input.item.json.data1 = cleaned.slice(0, 40000);\n    $input.item.json.data2 = cleaned.slice(40000);\n} else {\n    $input.item.json.data1 = cleaned;\n    $input.item.json.data2 = \"NA\";\n}\n\n$input.item.json.data = \"\";\nreturn $input.item.json;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        700,
+        -220
+      ],
+      "id": "0c7b2a7d-70bf-4cc2-afeb-f725b923882b",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fd8d54d4-25be-45e4-b247-fd1149262b00",
+              "name": "urls",
+              "value": "={{ $json.urls }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -180,
+        -145
+      ],
+      "id": "f38e1c4b-45cf-45c1-8a75-6877d2119855",
+      "name": "Limit output to only urls"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Original HTML from the input item\nconst inputHtmlString = $input.item.json.data;\n\nfunction cleanHtmlContent(htmlString) {\n    if (typeof htmlString !== 'string' || !htmlString) {\n        return \"\";\n    }\n\n    let cleanedText = htmlString;\n\n    // 1. Remove script and style tags and their content\n    cleanedText = cleanedText.replace(/<script\\b[^<]*(?:(?!<\\/script>)<[^<]*)*<\\/script>/gi, '');\n    cleanedText = cleanedText.replace(/<style\\b[^<]*(?:(?!<\\/style>)<[^<]*)*<\\/style>/gi, '');\n\n    // 2. Remove title tags\n    cleanedText = cleanedText.replace(/<title\\b[^<]*(?:(?!<\\/title>)<[^<]*)*<\\/title>/gi, '');\n\n    // 3. Remove all HTML tags\n    cleanedText = cleanedText.replace(/<[^>]*>/g, '');\n\n    // 4. Replace common HTML entities\n    cleanedText = cleanedText.replace(/&amp;/g, '&')\n        .replace(/&lt;/g, '<')\n        .replace(/&gt;/g, '>')\n        .replace(/&quot;/g, '\"')\n        .replace(/&#39;/g, \"'\")\n        .replace(/&nbsp;/g, ' ')\n        .replace(/&mdash;/g, '—')\n        .replace(/&ndash;/g, '–')\n        .replace(/&copy;/g, '©')\n        .replace(/&reg;/g, '®')\n        .replace(/&trade;/g, '™');\n\n    // 5. Remove template variable patterns\n    cleanedText = cleanedText.replace(/\\{\\{[^}]*\\}\\}/g, '')\n        .replace(/\\$\\{[^}]*\\}/g, '')\n        .replace(/\\{\\{\\{[^}]*\\}\\}\\}/g, '');\n\n    // 6. Normalize whitespace\n    cleanedText = cleanedText.replace(/[\\r\\n]+/g, '\\n')\n        .replace(/[ \\t]+/g, ' ')\n        .replace(/ \\n/g, '\\n')\n        .replace(/\\n /g, '\\n');\n\n    // 7. Trim\n    return cleanedText.trim();\n}\n\nfunction extractUrlsFromHtml(htmlString) {\n    const urls = new Set();\n\n    // Attribute-based URLs\n    const attributeUrlRegex = /(?:href|src|data-src|action)\\s*=\\s*['\"]([^'\"]+)['\"]/gi;\n    let match;\n    while ((match = attributeUrlRegex.exec(htmlString)) !== null) {\n        if (match[1]?.trim()) urls.add(match[1]);\n    }\n\n    // CSS url() pattern\n    const cssUrlRegex = /url\\(['\"]?([^)'\"]+)['\"]?\\)/gi;\n    while ((match = cssUrlRegex.exec(htmlString)) !== null) {\n        if (match[1]?.trim()) urls.add(match[1]);\n    }\n\n    // Keep only URLs from inc42.com/startups/\n    const filteredUrls = Array.from(urls).filter(url =>\n        /^https?:\\/\\/inc42\\.com\\/startups\\/?/i.test(url)\n    );\n\n    return filteredUrls;\n}\n\n// Process HTML\nconst cleanedText = cleanHtmlContent(inputHtmlString);\nconst urls = extractUrlsFromHtml(inputHtmlString);\n\n// Store cleaned text and URLs separately\n$input.item.json.data = cleanedText;\n$input.item.json.urls = urls;\n\n// NEW FIELD: store both text and URLs together for summary/reference\n$input.item.json.myNewField = `${cleanedText}\\n\\n=== URLs ===\\n${urls.join('\\n')}`;\n\nreturn $input.item.json;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -400,
+        -145
+      ],
+      "id": "6d72609c-22a7-40b0-825a-6463e42f122e",
+      "name": "Extract URL's from source code"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.urls }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        480,
+        -220
+      ],
+      "id": "b6bde3a8-dc2c-48fe-88f8-afad337c5eee",
+      "name": "HTTP Request",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "urls",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        40,
+        -145
+      ],
+      "id": "d26cd6a2-4ffe-4a9a-bd04-2662d274b5be",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "url": "https://inc42.com/startups/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -620,
+        -145
+      ],
+      "id": "b9014df4-3da7-40f4-8d9d-cc5a3a7f6514",
+      "name": "Inc42 Website Scraping"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"Source URL\":\"https://x.com/StartupReport/status/1950560145114845505\",\n  \"Company Mentioned\": \"Ramp\",\n  \"Context\": \"Ramp secured $500M in funding to enhance its AI-powered financial automation.\",\n  \"Category\": \"Funding Announcement\",\n  \"Additional Trend Reason\":\"The substantial funding amount ($500M) is likely a contributing factor to why Ramp is in trend. Large funding rounds often generate buzz and media coverage, drawing attention to the company.\",\n\"other links mentioned\": [{\"display_url\":\"pymnts.com/news/investmen…\",\"expanded_url\":\"https://www.pymnts.com/news/investment-tracker/2025/ramp-raises-500-million-to-fund-financial-automation-ai-agent/\",\"url\":\"https://t.co/9dA6sCzfVv\",\"indices\":[68,91]}]\n}",
+        "autoFix": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        -60,
+        1212.5
+      ],
+      "id": "093996c2-8bc7-49a1-9143-ea6174cce926",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -400,
+        1365
+      ],
+      "id": "6c53fd38-7f3d-4c90-816e-a31082a9304b",
+      "name": "Loop Over Items4"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg",
+          "mode": "list",
+          "cachedResultName": "Razorpay Case Study",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 659514524,
+          "mode": "list",
+          "cachedResultName": "Company Information",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit#gid=659514524"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Source URL": "={{ $json.output['Source URL'] }}",
+            "Company Name": "={{ $json.output['Company Mentioned'] }}",
+            "Context": "={{ $json.output.Context }}",
+            "Category": "={{ $json.output.Category }}",
+            "Additional Trend Reason": "={{ $json.output['Additional Trend Reason'] }}",
+            "Other Links": "={{ $json.output['other links mentioned'] }}"
+          },
+          "matchingColumns": [
+            "Source URL"
+          ],
+          "schema": [
+            {
+              "id": "Source URL",
+              "displayName": "Source URL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Context",
+              "displayName": "Context",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Category",
+              "displayName": "Category",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Additional Trend Reason",
+              "displayName": "Additional Trend Reason",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Other Links",
+              "displayName": "Other Links",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        316,
+        1190
+      ],
+      "id": "b34df3c4-fb6a-4f81-9dcd-3b2a264c60b3",
+      "name": "Google Sheets6",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "H8wE9zp3Vh0SCdId",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Check if the transcript content mentions or refers to any company and output the name of the company/companies mentioned in the transcript submitted to you\n\nFigure out the context in which the information is mentioned also layout the context along with the name of the company\n\nAlong with this also categorise the reason why the company is being talked about. Here are a few categories you can put the company into\n1. It is a funding announcement\n2. There was a produt hunt launch\n3. The founder post went viral\n4. Founder was featured in a Youtube video or in a startup feature segment\n5. Any other public signal - press mention, award, waitlist spikes etc.\n\nAlong with this, also think about other reasons why the company might be \"in trend\".\n\nGo through the content and also find the following information\n1. Name of the founder/CEO\n2. Country the startup is from\n3. Industry the startup serves\n\nTranscript Content:\n {{ $json.Content }}\n\nSource URL:\n{{ $json['YT Link'] }}",
+        "hasOutputParser": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        -164,
+        1690
+      ],
+      "id": "6d67b803-253c-4140-8103-663fdeb8716b",
+      "name": "AI Agent1"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"Source URL\":\"https://x.com/StartupReport/status/1950560145114845505\",\n  \"Company Mentioned\": \"Ramp\",\n  \"Context\": \"Ramp secured $500M in funding to enhance its AI-powered financial automation.\",\n  \"Category\": \"Funding Announcement\",\n  \"Additional Trend Reason\":\"The substantial funding amount ($500M) is likely a contributing factor to why Ramp is in trend. Large funding rounds often generate buzz and media coverage, drawing attention to the company.\",\n\"other links mentioned\": [{\"display_url\":\"pymnts.com/news/investmen…\",\"expanded_url\":\"https://www.pymnts.com/news/investment-tracker/2025/ramp-raises-500-million-to-fund-financial-automation-ai-agent/\",\"url\":\"https://t.co/9dA6sCzfVv\",\"indices\":[68,91]}],\n\"founder name\":\"Vijay sekhar sharma\",\n\"Operating Country\":\"India\",\n\"Industry\":\"Payments\"\n}",
+        "autoFix": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        -60,
+        1912.5
+      ],
+      "id": "3d1a40bb-d233-4147-ae51-7e8d66bc72c9",
+      "name": "Structured Output Parser1"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -400,
+        2065
+      ],
+      "id": "61b5280f-92b7-4d98-be49-eee3cb2da3ab",
+      "name": "Loop Over Items5"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg",
+          "mode": "list",
+          "cachedResultName": "Razorpay Case Study",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 659514524,
+          "mode": "list",
+          "cachedResultName": "Company Information",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit#gid=659514524"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Source URL": "={{ $json.output['Source URL'] }}",
+            "Company Name": "={{ $json.output['Company Mentioned'] }}",
+            "Context": "={{ $json.output.Context }}",
+            "Category": "={{ $json.output.Category }}",
+            "Additional Trend Reason": "={{ $json.output['Additional Trend Reason'] }}",
+            "Other Links": "={{ $json.output['other links mentioned'] }}",
+            "Founder Name": "={{ $json.output['founder name'] }}",
+            "Operatinng Country": "={{ $json.output['Operating Country'] }}",
+            "Industry": "={{ $json.output.Industry }}"
+          },
+          "matchingColumns": [
+            "Source URL"
+          ],
+          "schema": [
+            {
+              "id": "Source URL",
+              "displayName": "Source URL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Context",
+              "displayName": "Context",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Category",
+              "displayName": "Category",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Additional Trend Reason",
+              "displayName": "Additional Trend Reason",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Other Links",
+              "displayName": "Other Links",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "More Information",
+              "displayName": "More Information",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Founder Name",
+              "displayName": "Founder Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Operatinng Country",
+              "displayName": "Operatinng Country",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Industry",
+              "displayName": "Industry",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        316,
+        2065
+      ],
+      "id": "0f9d1a9d-4c74-4757-9170-44cd6ff433d6",
+      "name": "Google Sheets9",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "H8wE9zp3Vh0SCdId",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-5-nano",
+          "mode": "list",
+          "cachedResultName": "gpt-5-nano"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -180,
+        1210
+      ],
+      "id": "af8b4d38-dcc0-473f-95ce-0b1f49e99556",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "QmHbH6JsJChaY7jE",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-5-nano",
+          "mode": "list",
+          "cachedResultName": "gpt-5-nano"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        28,
+        1410
+      ],
+      "id": "0fa20dc6-64ba-4f70-868f-18ed494b1bf0",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "QmHbH6JsJChaY7jE",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $json['Other Links'][0].expanded_url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        536,
+        1190
+      ],
+      "id": "4479fa63-c288-4e6d-b458-3f9d4864240a",
+      "name": "HTTP Request4",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-5-nano",
+          "mode": "list",
+          "cachedResultName": "gpt-5-nano"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -180,
+        1910
+      ],
+      "id": "144ddd45-ad0e-48df-83cc-69197093d75b",
+      "name": "OpenAI Chat Model2",
+      "credentials": {
+        "openAiApi": {
+          "id": "QmHbH6JsJChaY7jE",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-5-nano",
+          "mode": "list",
+          "cachedResultName": "gpt-5-nano"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        28,
+        2110
+      ],
+      "id": "7e107344-ce9a-4ba0-ad63-90a11abbc162",
+      "name": "OpenAI Chat Model3",
+      "credentials": {
+        "openAiApi": {
+          "id": "QmHbH6JsJChaY7jE",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Add a new field called 'myNewField' to the JSON of the item\nconst inputHtmlString = $input.item.json.data;\n\nfunction cleanHtmlContent(htmlString) {\n    if (typeof htmlString !== 'string' || !htmlString) {\n        return \"\";\n    }\n\n    let cleanedText = htmlString;\n\n    // 1. Remove script and style tags and their content\n    cleanedText = cleanedText.replace(/<script\\b[^<]*(?:(?!<\\/script>)<[^<]*)*<\\/script>/gi, '');\n    cleanedText = cleanedText.replace(/<style\\b[^<]*(?:(?!<\\/style>)<[^<]*)*<\\/style>/gi, '');\n\n    // 2. Remove title tags and their content\n    cleanedText = cleanedText.replace(/<title\\b[^<]*(?:(?!<\\/title>)<[^<]*)*<\\/title>/gi, '');\n\n    // 3. Remove all other HTML tags\n    cleanedText = cleanedText.replace(/<[^>]*>/g, '');\n\n    // 4. Replace common HTML entities with their corresponding characters\n    cleanedText = cleanedText.replace(/&amp;/g, '&');\n    cleanedText = cleanedText.replace(/&lt;/g, '<');\n    cleanedText = cleanedText.replace(/&gt;/g, '>');\n    cleanedText = cleanedText.replace(/&quot;/g, '\"');\n    cleanedText = cleanedText.replace(/&#39;/g, \"'\"); \n    cleanedText = cleanedText.replace(/&nbsp;/g, ' '); \n    cleanedText = cleanedText.replace(/&mdash;/g, '—'); \n    cleanedText = cleanedText.replace(/&ndash;/g, '–'); \n    cleanedText = cleanedText.replace(/&copy;/g, '©'); \n    cleanedText = cleanedText.replace(/&reg;/g, '®'); \n    cleanedText = cleanedText.replace(/&trade;/g, '™'); \n\n    // 5. Remove common template literal/variable patterns\n    cleanedText = cleanedText.replace(/\\{\\{\\{[^}]*\\}\\}\\}/g, ''); \n    cleanedText = cleanedText.replace(/\\{\\{[^}]*\\}\\}/g, ''); \n    cleanedText = cleanedText.replace(/\\$\\{[^}]*\\}/g, '');  \n\n    // 6. Remove all URLs from the text (http, https, www, bare domains)\n    cleanedText = cleanedText.replace(/\\b(?:https?:\\/\\/|www\\.)[^\\s]+/gi, '');\n    cleanedText = cleanedText.replace(/\\b[a-z0-9.-]+\\.[a-z]{2,}(?:\\/[^\\s]*)?/gi, '');\n\n    // 7. Collapse all whitespace into a single space\n    cleanedText = cleanedText.replace(/\\s+/g, ' ').trim();\n\n    return cleanedText;\n}\n\n// Clean the HTML content\nlet cleaned = cleanHtmlContent(inputHtmlString);\n\n// Output only data1 and data2\nif (cleaned.length > 40000) {\n    $input.item.json.data1 = cleaned.slice(0, 40000);\n    $input.item.json.data2 = cleaned.slice(40000);\n} else {\n    $input.item.json.data1 = cleaned;\n    $input.item.json.data2 = \"NA\";\n}\n\n$input.item.json.data = \"\";\nreturn $input.item.json;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        756,
+        1190
+      ],
+      "id": "a2c2170b-bce4-4127-ad11-b0321351b1e5",
+      "name": "Code1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Go through this page information and answer the following questions only if the information is present in the data being shared with you\n\nPage Info\n{{ $json.data1 }} {{ $json.data2 }}\n\nother page\n{{ $('Google Sheets7').item.json['Tweet Text'] }}\n\n1. What is the name of the CEO/Founder of {{ $('Google Sheets6').item.json['Company Name'] }}\n2. Which country does the company belong to?\n3. What industry is the company in?\n\nOutput the information in a json format\n",
+        "hasOutputParser": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        992,
+        1190
+      ],
+      "id": "ac33ffec-033a-438d-91ae-98b79a40a159",
+      "name": "AI Agent2"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-5-nano",
+          "mode": "list",
+          "cachedResultName": "gpt-5-nano"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        976,
+        1410
+      ],
+      "id": "867ebf16-f902-4929-a1e7-57f4161e0772",
+      "name": "OpenAI Chat Model4",
+      "credentials": {
+        "openAiApi": {
+          "id": "QmHbH6JsJChaY7jE",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n\t\"founder name\": \"Dave\",\n\t\"Country\": \"India\",\n    \"Industry\":\"IT Services\"\n}",
+        "autoFix": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        1096,
+        1412.5
+      ],
+      "id": "4e03048e-07b0-4820-9b35-8f8ab33a9389",
+      "name": "Structured Output Parser2"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-5-nano",
+          "mode": "list",
+          "cachedResultName": "gpt-5-nano"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1184,
+        1610
+      ],
+      "id": "52d49a21-10f9-4994-8cda-5e2579847928",
+      "name": "OpenAI Chat Model5",
+      "credentials": {
+        "openAiApi": {
+          "id": "QmHbH6JsJChaY7jE",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg",
+          "mode": "list",
+          "cachedResultName": "Razorpay Case Study",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 659514524,
+          "mode": "list",
+          "cachedResultName": "Company Information",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit#gid=659514524"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Source URL": "={{ $('Google Sheets6').item.json['Source URL'] }}",
+            "Operatinng Country": "={{ $json.output.Country }}",
+            "Founder Name": "={{ $json.output['founder name'] }}",
+            "Industry": "={{ $json.output.Industry }}"
+          },
+          "matchingColumns": [
+            "Source URL"
+          ],
+          "schema": [
+            {
+              "id": "Source URL",
+              "displayName": "Source URL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Context",
+              "displayName": "Context",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Category",
+              "displayName": "Category",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Additional Trend Reason",
+              "displayName": "Additional Trend Reason",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Other Links",
+              "displayName": "Other Links",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "More Information",
+              "displayName": "More Information",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Founder Name",
+              "displayName": "Founder Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Operatinng Country",
+              "displayName": "Operatinng Country",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Industry",
+              "displayName": "Industry",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        1472,
+        1365
+      ],
+      "id": "19173449-bb40-4c0a-a4b6-fad3b5b35573",
+      "name": "Google Sheets10",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "H8wE9zp3Vh0SCdId",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg",
+          "mode": "list",
+          "cachedResultName": "Razorpay Case Study",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 659514524,
+          "mode": "list",
+          "cachedResultName": "Extracted Information",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit#gid=659514524"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Operatinng Country",
+              "lookupValue": "India"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -620,
+        2725
+      ],
+      "id": "3029f5db-3c3d-491c-bf2d-8a0f3b540ec5",
+      "name": "Google Sheets11",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "H8wE9zp3Vh0SCdId",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Go through the value passed through as {{ $json['Company Name'] }}\n\nThe first thing that you need to do here is to classify the company as a mature startup or an up and coming startup. If you classify a company as a mature startup/company, disregard the rest of the prompt and start researching about the next company.\n\nThe intent is to reduce the number of calls to the AI platform and to the search platform\n\nSometimes, company name has more than one name within it\n\nYou need to make independent searches of the web using the brave search tool to find the following information about the company\n\n1. Website of the company\n2. Funding information about the company\n3. Classified as Mature or up and coming\n3. linkedin url of the company\n4. Linkedin url of the founder/ceo\n5. Instagram url of the company\n6. Twitter url of the company\n\noutput this information as a json with a little information taken from before including\n\nSource url:{{ $json['Source URL'] }}\nSelection Context: {{ $json.Context }}",
+        "hasOutputParser": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        -148,
+        2550
+      ],
+      "id": "2c879094-aa86-466c-b75f-7f6c8fd23584",
+      "name": "AI Agent3",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "query": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Query', ``, 'string') }}"
+      },
+      "type": "@brave/n8n-nodes-brave-search.braveSearchTool",
+      "typeVersion": 1,
+      "position": [
+        -60,
+        2770
+      ],
+      "id": "907ccc1a-5838-4d30-b93b-e1fbe8ad1599",
+      "name": "Brave Search",
+      "credentials": {
+        "braveSearchApi": {
+          "id": "th6ty07o9yW9C1Cg",
+          "name": "Brave Search account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-5-nano",
+          "mode": "list",
+          "cachedResultName": "gpt-5-nano"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -180,
+        2770
+      ],
+      "id": "3a55db5d-44a4-4204-9ea0-5c62e2da95c4",
+      "name": "OpenAI Chat Model6",
+      "credentials": {
+        "openAiApi": {
+          "id": "QmHbH6JsJChaY7jE",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"title\": \"CompanyInformation\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"website\": {\n      \"type\": \"string\",\n      \"format\": \"uri\",\n      \"description\": \"Official website of the company\"\n    },\n    \"funding_information\": {\n      \"type\": \"string\",\n      \"description\": \"Funding information about the company (rounds, investors, amount, etc.)\"\n    },\n     \"classified_as\": {\n      \"type\": \"string\",\n      \"description\": \"The company is classified as an up and coming startup or as a mature startup/company\"\n    },\n    \"linkedin_company_url\": {\n      \"type\": \"string\",\n      \"format\": \"uri\",\n      \"description\": \"LinkedIn profile URL of the company\"\n    },\n    \"linkedin_founder_ceo_url\": {\n      \"type\": \"string\",\n      \"format\": \"uri\",\n      \"description\": \"LinkedIn profile URL of the company's founder or CEO\"\n    },\n    \"instagram_url\": {\n      \"type\": \"string\",\n      \"format\": \"uri\",\n      \"description\": \"Instagram profile URL of the company\"\n    },\n    \"twitter_url\": {\n      \"type\": \"string\",\n      \"format\": \"uri\",\n      \"description\": \"Twitter/X profile URL of the company\"\n    },\n    \"source_url\": {\n      \"type\": \"string\",\n      \"format\": \"uri\",\n      \"description\": \"Source URL of the tweet or transcript\"\n    },\n    \"selection_context\": {\n      \"type\": \"string\",\n      \"description\": \"Reason for selection of the company\"\n    }\n  },\n  \"required\": [\n    \"website\",\n    \"funding_information\",\n    \"linkedin_company_url\",\n    \"linkedin_founder_ceo_url\",\n    \"instagram_url\",\n    \"twitter_url\",\n    \"source_url\",\n    \"selection_context\"\n  ]\n}\n",
+        "autoFix": true,
+        "customizeRetryPrompt": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        60,
+        2772.5
+      ],
+      "id": "f1323491-9429-4d08-acf6-2b5cb343d045",
+      "name": "Structured Output Parser3"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-5-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-5-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        148,
+        2970
+      ],
+      "id": "58eb4310-0e7e-45ca-912f-e934ecabc9b2",
+      "name": "OpenAI Chat Model7",
+      "credentials": {
+        "openAiApi": {
+          "id": "QmHbH6JsJChaY7jE",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -400,
+        2725
+      ],
+      "id": "da7941da-29d1-479f-875c-ec206a827752",
+      "name": "Loop Over Items6"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg",
+          "mode": "list",
+          "cachedResultName": "Razorpay Case Study",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 851688094,
+          "mode": "list",
+          "cachedResultName": "Company Information",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Heyh53aIsTE_bsq3hzfl9NKYdIl5H4k6c1_kX_Ff_dg/edit#gid=851688094"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Company Website": "={{ $json.output.website }}",
+            "Funding Info": "={{ $json.output.funding_information }}",
+            "Company Linkedin Url": "={{ $json.output.linkedin_company_url }}",
+            "Founder Linkedin Url": "={{ $json.output.linkedin_founder_ceo_url }}",
+            "Company Instagram Url": "={{ $json.output.instagram_url }}",
+            "Company Twitter Url": "={{ $json.output.twitter_url }}",
+            "Selection Source": "={{ $json.output.source_url }}",
+            "Selection Context": "={{ $json.output.selection_context }}",
+            "Classify As": "={{ $json.output.classified_as }}"
+          },
+          "matchingColumns": [
+            "Company Website"
+          ],
+          "schema": [
+            {
+              "id": "Company Website",
+              "displayName": "Company Website",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Funding Info",
+              "displayName": "Funding Info",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Classify As",
+              "displayName": "Classify As",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Company Linkedin Url",
+              "displayName": "Company Linkedin Url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Founder Linkedin Url",
+              "displayName": "Founder Linkedin Url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Instagram Url",
+              "displayName": "Company Instagram Url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Twitter Url",
+              "displayName": "Company Twitter Url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Selection Source",
+              "displayName": "Selection Source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Selection Context",
+              "displayName": "Selection Context",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        436,
+        2725
+      ],
+      "id": "3db8cba3-814e-46e7-a3ff-ccdac091e7b2",
+      "name": "Google Sheets12",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "H8wE9zp3Vh0SCdId",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -840,
+        1715
+      ],
+      "id": "fa5895ae-0aa1-40eb-bf80-9227761d7e48",
+      "name": "Schedule Trigger1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Google Sheets2": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items1": {
+      "main": [
+        [],
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets3": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items2": {
+      "main": [
+        [],
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets5": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets4": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Backstage with Millionaires": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fibonnaci X": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Backstage with Millionaires",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Fibonnaci X",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Inc42 Website Scraping",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Split Out1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request3": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items3": {
+      "main": [
+        [],
+        [
+          {
+            "node": "HTTP Request3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets7": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit output to only urls": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract URL's from source code": {
+      "main": [
+        [
+          {
+            "node": "Limit output to only urls",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Inc42 Website Scraping": {
+      "main": [
+        [
+          {
+            "node": "Extract URL's from source code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets8": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items4": {
+      "main": [
+        [],
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets6": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent1": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items5": {
+      "main": [
+        [],
+        [
+          {
+            "node": "AI Agent1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets9": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Structured Output Parser",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request4": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Structured Output Parser1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "AI Agent2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent2": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent2",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser2": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent2",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model5": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Structured Output Parser2",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets10": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets11": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Brave Search": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent3",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model6": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent3",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser3": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent3",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model7": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Structured Output Parser3",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items6": {
+      "main": [
+        [],
+        [
+          {
+            "node": "AI Agent3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent3": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets12": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger1": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "65a785ef-5c1d-4b3f-b189-0f1a4de35396",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "b1cefd417efb640750343d42eec2b594bc759a270ee5b8952587b7e54b4913c2"
+  },
+  "id": "NTOkIT6x5yVjIRG2",
+  "tags": []
+}
